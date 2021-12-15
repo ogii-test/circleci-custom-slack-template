@@ -7,7 +7,7 @@ jobs:
   deploy:
     docker:
       - image: cimg/node:17.2.0
-    steps:
+    steps: 
       - checkout
       - run:
           command: npm run deploy
