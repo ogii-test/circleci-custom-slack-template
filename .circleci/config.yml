@@ -9,8 +9,6 @@ jobs:
       - image: cimg/node:17.2.0
     steps: 
       - checkout
-      - run:
-          command: npm run deploy
       - slack/notify:
           channel: slacktest
           event: always
