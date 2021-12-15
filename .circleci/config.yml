@@ -29,13 +29,12 @@ jobs:
     steps:
       - checkout 
       - run:
-          command: >-
-            echo 'export TEMPLATE=$(cat ./templates/template.json)' >> $BASH_ENV
-            echo $TEMPLATE
-          name: >-
+          command: |
+            echo 'export TEMPLATE_JSON=$(cat ./templates/template.json)' >> $BASH_ENV
+            echo $TEMPLATE_JSON
+          name: |
             Store the content of the success.json template into a custom
             environment variable
       - slack/notify:
-          channel: slacktest
-          template: TEMPLATE
+          template: TEMPLATE_JSON
           event: pass
