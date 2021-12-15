@@ -31,6 +31,7 @@ jobs:
       - run:
           command: >-
             echo 'export TEMPLATE=$(cat ./templates/template.json)' >> $BASH_ENV
+            echo $TEMPLATE
           name: >-
             Store the content of the success.json template into a custom
             environment variable
