@@ -6,7 +6,7 @@ orbs:
 jobs:
   deploy:
     docker:
-      - image: cimg/node:17.2.0
+      - image: cimg/base:2020.01
     steps: 
       - checkout
       - slack/notify:
