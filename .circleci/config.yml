@@ -36,6 +36,6 @@ jobs:
             Store the content of the success.json template into a custom
             environment variable
       - slack/notify:
-          custom: TEMPLATE_JSON
+          template: TEMPLATE_JSON
           event: pass
           channel: slacktest
