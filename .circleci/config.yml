@@ -11,27 +11,11 @@ jobs:
   build:
     docker:
       - image: cimg/base:2021.11
-
-    working_directory: ~/repo
-    parameters:
-      buildName:
-        description: a message that decribes build basic info
-        type: string
-        default: "N/A"
-      slackChannel:
-        description: destination Slack channel of the notification
-        type: string
-        default: "N/A"
-      artifactUrl:
-        description: http url of the output build artifact
-        type: string
-        default: "google.com/1.0.0"
     steps:
       - checkout 
       - run:
           command: |
             echo 'export TEMPLATE_JSON=$(cat ./templates/template.json)' >> $BASH_ENV
-            echo $TEMPLATE_JSON
           name: |
             Store the content of the success.json template into a custom
             environment variable
