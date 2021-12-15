@@ -10,7 +10,7 @@ workflows:
 jobs:
   build:
     docker:
-      - image: cimg/base
+      - image: cimg/base:2021.11
 
     working_directory: ~/repo
     parameters:
