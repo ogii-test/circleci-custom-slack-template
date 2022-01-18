@@ -12,7 +12,7 @@ jobs:
       - slack/notify:
           channel: slacktest
           event: always
-          template: basic_success_1
+          template: basic_success_1 
            
 workflows:
   deploy_and_notify:
